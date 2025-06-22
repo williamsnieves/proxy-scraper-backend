@@ -3,7 +3,7 @@ services:
     name: proxy-scraper-backend
     runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn --bind 0.0.0.0:$PORT --workers 1 proxy_scraper:app
+    startCommand: gunicorn --bind 0.0.0.0:$PORT --workers 1 wsgi:app
     plan: free
     envVars:
       - key: PYTHON_VERSION

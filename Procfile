@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:$PORT --workers 1 proxy_scraper:app 
+web: gunicorn --bind 0.0.0.0:$PORT --workers 1 wsgi:app 
