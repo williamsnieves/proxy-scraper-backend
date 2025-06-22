@@ -4,7 +4,7 @@ Default app.py entry point for Render.
 Render automatically looks for this file.
 """
 
-from proxy_scraper import app
+from proxy_scraper_playwright import app
 
 if __name__ == "__main__":
     import os

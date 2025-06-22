@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Proxy Backend para Web Scraping
-Este servicio se puede desplegar en un servidor separado para evitar el problema del origen localhost.
+Proxy Backend con Playwright para Web Scraping
+Maneja sitios con JavaScript, Cloudflare, y otras protecciones avanzadas.
 """
 
 from flask import Flask, request, jsonify
@@ -10,6 +10,12 @@ import asyncio
 import aiohttp
 import random
 from urllib.parse import urlparse
+from playwright.async_api import async_playwright
+import logging
+
+# Configurar logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
 CORS(app)  # Permitir requests desde cualquier origen

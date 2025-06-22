@@ -4,7 +4,7 @@ WSGI entry point for Render deployment.
 This file allows Render to find our Flask app easily.
 """
 
-from proxy_scraper import app
+from proxy_scraper_playwright import app
 
 if __name__ == "__main__":
     app.run() 
